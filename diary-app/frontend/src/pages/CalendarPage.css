@@ -1,0 +1,106 @@
+.calendar-page { max-width: 860px; }
+
+.cal-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cal-card {
+  flex: 0 0 360px;
+  padding: 1.25rem;
+}
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cal-month-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.cal-day-name {
+  text-align: center;
+  font-size: .7rem;
+  color: var(--text-muted);
+  padding: .35rem 0;
+  letter-spacing: .04em;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  gap: 2px;
+}
+.cal-day:hover { background: var(--bg-hover); color: var(--text-primary); }
+.cal-day.today { color: var(--accent-bright); font-weight: 600; }
+.cal-day.has-entry { color: var(--text-primary); }
+.cal-day.selected {
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-bright);
+}
+
+.cal-dot {
+  width: 4px; height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.cal-day.selected .cal-dot { background: var(--accent-bright); }
+
+.cal-entries {
+  flex: 1;
+  min-width: 220px;
+}
+.cal-entries-date {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.cal-entry-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .875rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: .9rem;
+  transition: all var(--transition);
+}
+.cal-entry-link:hover {
+  border-color: var(--border-mid);
+  background: var(--bg-raised);
+  text-decoration: none;
+}
+.cal-entry-title { flex: 1; }
+
+@media (max-width: 640px) {
+  .cal-card { flex: 0 0 100%; }
+}

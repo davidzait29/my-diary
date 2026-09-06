@@ -1,0 +1,103 @@
+.entry-loading {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 60vh;
+  color: var(--text-secondary);
+  gap: 1rem;
+}
+
+.entry-view { max-width: 760px; }
+
+.entry-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.back-btn { gap: .35rem; }
+
+.entry-actions {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.fav-btn { color: var(--text-muted); }
+.fav-btn.favorited { color: var(--warning); }
+.fav-btn:hover { color: var(--warning); }
+
+.entry-article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 2rem;
+}
+
+.entry-article-date {
+  display: block;
+  font-size: .875rem;
+  color: var(--accent-bright);
+  letter-spacing: .04em;
+  margin-bottom: .75rem;
+  font-weight: 400;
+}
+
+.entry-article-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: .01em;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8125rem;
+  color: var(--text-muted);
+}
+
+/* The reading body */
+.entry-body {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.85;
+  color: var(--text-primary);
+  max-width: 65ch;
+}
+.entry-body p {
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+.entry-body p + p { margin-top: 1.1em; }
+.entry-body br { display: block; content: ''; margin: .4em 0; }
+
+.entry-article-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: .8125rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: .5rem;
+}
+
+@media (max-width: 600px) {
+  .entry-article-title { font-size: 1.75rem; }
+  .entry-body { font-size: 1.0625rem; }
+  .entry-actions { gap: .35rem; }
+  .entry-actions .btn-ghost span { display: none; }
+}
+
+.fav-readonly {
+  display: flex;
+  align-items: center;
+  padding: .45rem;
+  color: var(--warning);
+  cursor: default;
+}

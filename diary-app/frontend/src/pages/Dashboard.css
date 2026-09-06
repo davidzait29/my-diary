@@ -1,0 +1,107 @@
+.dashboard { max-width: 900px; }
+
+.dash-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+.dash-greeting {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: .01em;
+  margin-bottom: .25rem;
+}
+
+.dash-date {
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.dash-stats { display: flex; gap: 1.5rem; }
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-bright);
+  line-height: 1;
+}
+.stat-label {
+  font-size: .75rem;
+  color: var(--text-muted);
+}
+
+.dash-loading, .dash-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem 0;
+  color: var(--text-secondary);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.section-header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .8125rem;
+}
+.see-all {
+  font-size: .8125rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.see-all:hover { color: var(--accent-bright); text-decoration: none; }
+
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.empty-icon { font-size: 3.5rem; margin-bottom: 1.25rem; }
+.empty-state h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: .5rem;
+}
+.empty-state p { color: var(--text-secondary); font-size: .9375rem; }
+.empty-hint {
+  margin-top: .75rem;
+  font-size: .875rem;
+  color: var(--text-muted);
+}
+.empty-hint strong { color: var(--text-secondary); }
+
+@media (max-width: 600px) {
+  .dash-greeting { font-size: 1.75rem; }
+  .entries-grid { grid-template-columns: 1fr; }
+}

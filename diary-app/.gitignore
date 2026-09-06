@@ -1,0 +1,32 @@
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build outputs
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Private diary TXT files — never commit raw diary content
+*.txt
+diary-entries/
+entries/
+
+# Backup files
+*.backup
+diary-backup-*.json
